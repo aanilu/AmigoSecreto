@@ -1,2 +1,3 @@
-# AmigoSecreto
-Challenge number one - Oracle
+<h1> Amigo Secreto </h1>
+
+- Estado del proyecto: en construccion. 
