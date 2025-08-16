@@ -11,6 +11,13 @@ function agregarAmigo() {
         return;
     }
 
+    // Validar que no contenga números
+    if (/\d/.test(nombre)) {
+        alert("No se permiten números en el nombre.");
+        input.value = "";
+        return;
+    }
+
     // Agregar el nombre al array
     amigos.push(nombre);
 
@@ -40,9 +47,11 @@ function sortearAmigo() {
         return;
     }
 
+    // Obtener un índice aleatorio
     const indiceAleatorio = Math.floor(Math.random() * amigos.length);
     const amigoSecreto = amigos[indiceAleatorio];
 
+    // Mostrar resultado en pantalla
     const resultado = document.getElementById("resultado");
     resultado.innerHTML = `<li>🎉 El amigo secreto es: <strong>${amigoSecreto}</strong> 🎉</li>`;
 }
